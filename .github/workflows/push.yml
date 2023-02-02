@@ -3,7 +3,7 @@ permissions:
   contents: write
 on:
   push:
-    branches:
+    branch:
       - main
 jobs:
   deploy:
@@ -16,7 +16,7 @@ jobs:
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          folder: public
+          folder: .
           clean: true
           clean-exclude: |
             special-file.txt
